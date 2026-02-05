@@ -1,0 +1,25 @@
+services:
+  waha:
+    image: devlikeapro/waha:latest
+    container_name: waha_container
+    restart: on-failure
+    env_file:
+      - .env
+    environment:
+      - WHATSAPP_HOOK_URL=http://api:5000/chatbot/webhook/
+      - WHATSAPP_HOOK_EVENTS=message
+    ports:
+      - "3000:3000"
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: wpp_bot_api_container
+    env_file:
+      - .env
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+      - ./chroma-data:/app/chroma-data
