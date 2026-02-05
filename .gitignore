@@ -1,0 +1,14 @@
+# venv(virtual envoirment)
+.venv
+
+# python caches 
+*__pycache__
+
+# vector db
+/chroma-data
+
+# envoirments variables
+.env
+
+# docs to RAG
+/rag/data
