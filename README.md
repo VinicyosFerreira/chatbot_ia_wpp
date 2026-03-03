@@ -1,17 +1,17 @@
-# Projeto de Chatbot com AI E RAG
+# 🤖 Chatbot com IA e WhatsApp
 
 Este é um projeto de chatbot usando uma API Flask e uma interface de webhook para WhatsApp. O chatbot é capaz de receber mensagens do WhatsApp, processá-las usando uma IA e responder às mensagens com base no contexto fornecido utilizando RAG(Retreival Augment Generated).
 
-# Tecnologias
-Python - Linguagem para executar scripts e processar dados.
+# 🛠️ Tecnologias
+ - **Python** 🐍 - Linguagem para executar scripts e processar dados.
 
-Flask API - API para configurar o webhook e comunicação com chatbot em tempo real.
+ - **Flask API** 🌐 - API para configurar o webhook e comunicação com chatbot em tempo real.
 
-WAHA - API do Whatsapp gratuita usada com Docker.
+- **WAHA** 💬 - API do Whatsapp gratuita usada com Docker.
 
-Docker e Docker Compose - Criar a infraestrutura do projeto e rodar o Waha e Flask.
+- **Docker e Docker Compose** 🐳 - Criar a infraestrutura do projeto e rodar o Waha e Flask.
 
-Langchain, ChormaDB e HuggingFace - Utilizada para comunicação com LLM, geração de embeddings e registro de banco vetorizado.
+- **Langchain, ChromaDB e HuggingFace** 🧠 - Utilizada para comunicação com LLM, geração de embeddings e criar um banco de dados vetorial.
 
 
 ## Pré-requisitos
@@ -22,15 +22,17 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 - Docker Compose
 - Documentos para RAG
 
-- OBS: `file_path = '/app/rag/data/docs.pdf`. Pode usar a estrutura para colocar e o caminho no file_path do arquivo `rag.py` 
+- 💡**OBS**: `file_path = '/app/rag/data/docs.pdf`. Pode usar a estrutura para colocar e o caminho no file_path do arquivo `rag.py` 
 
-## Instalação
+## ⚙️ Instalação
 
 Siga as etapas abaixo para instalar e executar o projeto:
 
 1. Clone este repositório para o seu ambiente local.
 
-    `git clone <link>`
+    `git clone [text](https://github.com/VinicyosFerreira/chatbot_ia_wpp)`
+
+    `cd chatbot_ia_wpp`
 
 2. Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis de ambiente:
 Utilize o `.env.example` como base.
@@ -65,9 +67,8 @@ conforme necessário.
 
 7. Agora rode acesse o Waha na porta localhost:3000 e termine a configuração use como guia a doc: `https://waha.devlike.pro/`. O servidor em Flask estará rodando na porta 5000.
 
-## Como testar
+## 🧪 Como testar
 O processo é bem simples no .env.example eu usei dois números particulares para teste, mas pode usar apenas um ou não definir eu usei para controle de mensagens para evitar que o bot envie mensagens apenas para os números permitidos.
-- `PHONE_NUMBER1 = 999999999999@c.us`
-- `PHONE_NUMBER2 = 888888888888@c.us`
+- `PHONE_NUMBER = 999999999999@c.us`
 
-Ao rodar o servidor e configurar o Waha e ele aparecer **IN_WORKING**, mande mensagem para o bot com número configurado e veja o resultado.
+Ao rodar o servidor e configurar o Waha e ele aparecer **IN_WORKING**, mande mensagem um **Oi** para o bot com número configurado e veja o resultado.
